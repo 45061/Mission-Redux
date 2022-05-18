@@ -5,7 +5,7 @@ function Home (){
   const dataApi = useContext(ApiContext);
   return(
     <div> 
-      {dataApi.map((item)=>{
+      {dataApi.data.map((item)=>{
         return( 
         <div key={item.id}>
           <img src ={item.image} alt='imagen personaje'/>

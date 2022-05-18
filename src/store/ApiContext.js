@@ -5,12 +5,14 @@ export const ApiContext = createContext();
 
 export const ApiProvider = ({children}) =>{
   const [data, setData] = useState([])
+  
 
   const showApi =() =>{
     axios
     .get("https://rickandmortyapi.com/api/character")
     .then((response)=>{
-      setData(response.data)
+      setData(response.data.results)
+      
     })
   }
 
